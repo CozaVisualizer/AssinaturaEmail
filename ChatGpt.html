@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+ <style>
+
+    @font-face {
+        font-family:'Axiforma-Regular';
+        src: url('Axiforma-Regular.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family:'Axiforma-Bold';
+        src: url('Axiforma-Bold.ttf') format('truetype');
+    }
+
+    #animlogo {
+      height: 160px;
+      position: absolute;
+      visibility: visible;
+      animation-name: opaanim;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+    }
+
+    @keyframes opaanim {
+        from {visibility: visible;}
+        to {visibility: hidden; opacity: 0;}
+    }
+
+
+    table {
+      opacity: 0;
+      animation-name: tableanim;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in;
+      animation-duration: 1s;
+      animation-delay: 2s;
+
+    }
+
+    @keyframes tableanim {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    .nametag {
+      font-family:'Axiforma-Regular';
+      font-size: 18px;
+      letter-spacing:-0.5px;
+      line-height: 1.2;
+    }
+    .name {
+      font-family:'Axiforma-Bold';
+      font-size: 26px;
+      letter-spacing:-0.5px;
+      line-height: 1.1;
+    }
+    .job-title {
+      font-family:'Axiforma-Regular';
+      font-size: 19px;
+      letter-spacing:-0.5px;
+      line-height: 1.6;
+    }
+    .phone {
+      font-family:'Axiforma-Regular';
+      font-size: 14px;
+    }
+    .email {
+      font-family:'Axiforma-Regular';
+      font-size: 14px;
+      line-height: 0.9;
+    }
+
+    .container {
+      min-width: 330px;
+      max-width: 580px;
+      height: 160px;
+      background-color: fff;
+      padding: 10px;
+      overflow: hidden;
+    }
+
+    .image-container {
+      width: 40%;
+      height: 100%;
+      background-color: fff;
+      text-align: center;
+      vertical-align: middle;
+      position: relative;
+    }
+
+    .image-container img {
+      max-width: 95%;
+      height:auto;
+      box-sizing: border-box;
+      padding: 0 10px;
+    }
+
+    .image-overlay {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      border-right: 1px solid black;
+      height: 70%;
+    }
+
+    .info-container {
+      width: 60%;
+      height: 100%;
+      background-color: fff;
+      vertical-align: middle;
+      padding-left: 20px;
+    }
+
+    a:link {
+      color: black;
+      text-decoration: none;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div><img src='animacaologo.gif?<?php echo time(); ?>' title="Coza" alt="Coza" id="animlogo"></div>
+
+    <table width="100%" style="height: 100%;" cellpadding="0" cellspacing="0">
+      <tr>
+        <td class="image-container">
+          <img src="sda.png" alt="My Image">
+          <div class="image-overlay"></div>
+        </td>
+        <td class="info-container">
+          <table cellpadding="0" cellspacing="0">
+            <tr>
+              <td class="nametag">Olá, meu nome é</td>
+            </tr>
+            <tr>
+              <td class="name">Henrique Kuhn Gobbi.</td>
+            </tr>
+            <tr>
+              <td class="job-title">Analista de Marketing.</td>
+            </tr>
+            <tr>
+              <td class="phone"><a class="phoneLink" href="tel:54999270004">54 9 9927.0004</a> | <a class="phoneLink" href="tel:5440097038">54 4009.7038</a></td>
+            </tr>
+            <tr>
+              <td class="email"><a href="mailto:henrique.gobbi@grupobrinox.com.br">henrique.gobbi@grupobrinox.com.br</a></td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
